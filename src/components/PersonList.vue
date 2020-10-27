@@ -30,7 +30,8 @@ export default {
             sortable: true,          
           },
           {
-              key: 'books.title',
+              key: 'books[0].title',
+              label: 'Books Lent',
               sortable: false,
           }
       ],

@@ -10,13 +10,13 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "person",
+      name: "person-details",
       alias: "/persons",
       component: PersonList
     },
     {
-      path: "/",
-      name: "books",
+      path: "/books",
+      name: "book-details",
       alias: "/books",
       component: BookList
     },

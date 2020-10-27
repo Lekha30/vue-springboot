@@ -5,20 +5,20 @@
             <ul>
                 <li v-for="(person, index) in persons" :key="index">
                 <div>
-                    <label>Name: </label> {{person.name}}
+                    <label><strong>Name: </strong> </label> {{person.name}}
                 </div>
                 <div>
-                    <label>Phone Number: </label> {{person.phoneNumber}}
+                    <label><strong>Phone Number: </strong> </label> {{person.phoneNumber}}
                 </div>
                 <div>
-                    <label>Email: </label> {{person.emailAddress}}
+                    <label> <strong>Email:</strong> </label> {{person.emailAddress}}
                 </div>
                  <div>
-                    <label>Books lent: </label>
+                    <h4>Books lent: </h4>
                     <ul>
                     <li v-for="(book, index) in person.books" :key="index">
                         <div>
-                            <label>Book Name: </label> {{book.title}}
+                            <label><strong> Book Name: </strong> </label> {{book.title}}
                         </div> 
                     </li>
                     </ul>
@@ -36,7 +36,7 @@
 import http from "../http-common";
  
 export default {
-  name: "person",
+  name: "person-details",
   data() {
     return {
       persons: []

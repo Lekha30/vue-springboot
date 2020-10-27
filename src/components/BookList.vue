@@ -5,7 +5,7 @@
             <ul>
                 <li v-for="(book, index) in books" :key="index">
                 <div>
-                    <label>Name: </label> {{book.title}}
+                    <label> <strong>Name: </strong></label> {{book.title}}
                 </div>
                 <div>
                     <label>Author: </label> {{book.author}}
@@ -30,7 +30,7 @@
 import http from "../http-common";
  
 export default {
-  name: "books",
+  name: "book",
  data() {
     return {
       books: []

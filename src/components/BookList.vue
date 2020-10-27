@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <h4>Persons List</h4>
+    <h4>Books List</h4>
         <b-table striped hover :items ="books" :fields= "fields">
         </b-table>
         <div class="col-md-6">

@@ -1,29 +1,12 @@
 <template>
-   <div class="list row">
+  <b-container>
+    <h4>Persons List</h4>
+        <b-table striped hover :items ="books" :fields= "fields">
+        </b-table>
         <div class="col-md-6">
-            <h4>Books List</h4>
-            <ul>
-                <li v-for="(book, index) in books" :key="index">
-                <div>
-                    <label> <strong>Name: </strong></label> {{book.title}}
-                </div>
-                <div>
-                    <label>Author: </label> {{book.author}}
-                </div>
-                <div>
-                    <label>Publication: </label> {{book.publication}}
-                </div>
-                 <div>
-                    <label>ISBN: </label> {{book.isbn}}
-                </div>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <router-view @refreshData="refreshList"></router-view>
-        </div>
+        <router-view @refreshData="refreshList"></router-view>
     </div>
- 
+  </b-container>
 </template>
  
 <script>
@@ -33,6 +16,24 @@ export default {
   name: "book",
  data() {
     return {
+      fields: [
+        {
+          key: 'title',
+          sortable: true,
+        },
+        {
+          key: 'author',
+          sortable: true,
+        },
+        {
+          key: 'isbn',
+          sortable: false,
+        },
+        {
+          key: 'publication',
+          sortable: true,
+        }
+      ],
       books: []
     };
   },

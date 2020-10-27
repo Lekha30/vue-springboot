@@ -1,18 +1,23 @@
 <template>
-  <div id="app">
+  <div id="app" class="container-fluid">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="site-info">
+            <h1>Jayalekha Ramesh</h1>
+            <h3>Vue SpringBoot example</h3>
+    </div>
+    <nav>
+      <router-link class="btn btn-primary" to="/persons">Person</router-link>
+      <router-link class="btn btn-primary" to="/books">Books</router-link>
+    </nav>
+    <br/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'app',
 }
 </script>
 
@@ -24,5 +29,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.site-info {
+  color: blue;
+  margin-bottom: 20px;
+}
+ 
+.btn-primary {
+  margin-right: 5px;
+}
+ 
+.container-fluid {
+  text-align: center;
 }
 </style>
